@@ -63,7 +63,8 @@ input {
   padding: 0 10px;
   height: 100%;
   width: 100%;
-
+  margin: auto;
+  max-width: 1170px;
   @media screen and (min-width: 359px) {
     padding: 0 16px;
   }
@@ -72,5 +73,8 @@ input {
   }
   @media screen and (min-width: 1023px) {
     padding: 0 60px;
+  }
+  @media screen and (min-width: 2559px) {
+    padding: 0px;
   }
 }

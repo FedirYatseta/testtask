@@ -42,8 +42,6 @@ const SectionThree = ({ position, setLoad }) => {
             })
     }, [])
 
-
-
     const isFormFilled =
         state.name !== '' &&
         state.email !== '' &&
