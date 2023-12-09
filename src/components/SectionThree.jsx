@@ -5,7 +5,6 @@ import UploadFile from '../ui/UploadFile'
 import Button from "../ui/Button";
 import axios from "axios";
 import Success from '../assets/Success'
-import { createTextMask } from 'redux-form-input-masks';
 
 const SectionThree = ({ position }) => {
     const initErrorState = {
@@ -43,9 +42,7 @@ const SectionThree = ({ position }) => {
             })
     }, [])
 
-    const phoneMask = createTextMask({
-        pattern: '(999) 999-9999',
-    });
+
 
     const isFormFilled =
         state.name !== '' &&
@@ -175,7 +172,7 @@ const SectionThree = ({ position }) => {
                                 type={'tel'}
                                 pattern={"^\\+380[0-9]{9}$"}
                                 description={'+38 (XXX) XXX - XX - XX'}
-                                phoneMask={phoneMask}
+
                                 onChange={handleInputChange} />
 
                             <div className="radio-group">

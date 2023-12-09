@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Input = ({ label, onChange, value, error, name, required, pattern, type, description, phoneMask }) => {
+const Input = ({ label, onChange, value, error, name, required, pattern, type, description }) => {
 
     const [isActive, setIsActive] = useState(false);
 
@@ -10,7 +10,6 @@ const Input = ({ label, onChange, value, error, name, required, pattern, type, d
 
     const handleBlur = (e) => {
         setIsActive(false);
-
     };
 
     return (
@@ -22,7 +21,6 @@ const Input = ({ label, onChange, value, error, name, required, pattern, type, d
                 {label}
             </label>
             <input
-
                 id={name}
                 name={name}
                 value={value}
@@ -33,7 +31,6 @@ const Input = ({ label, onChange, value, error, name, required, pattern, type, d
                 onBlur={handleBlur}
                 aria-label="Some text"
                 required={required}
-
             />
             {error && <span className="error">{error}</span>}
             {!error && description && <span className="description">{description}</span>}
