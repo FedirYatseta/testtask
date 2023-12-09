@@ -1,0 +1,33 @@
+.section-two {
+  & .block {
+    text-align: center;
+    padding: 140px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  & .title {
+    font-size: 40px;
+    text-align: center;
+    color: var(--black-87);
+    line-height: 40px;
+    margin-bottom: 50px;
+    max-width: 328px;
+  }
+  & .users {
+    margin-bottom: 52px;
+  }
+  @media screen and (min-width: 767px) {
+    & .title {
+      max-width: fit-content;
+    }
+  }
+
+  @media screen and (min-width: 1023px) {
+    & .users {
+      margin-bottom: 50px;
+    }
+  }
+}
