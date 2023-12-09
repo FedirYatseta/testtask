@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import axios from "axios";
-import pixel from './image/1024.png'
 import SectionOne from "./components/SectionOne";
 import SectionTwo from "./components/SectionTwo";
 import SectionThree from "./components/SectionThree";
@@ -31,7 +30,7 @@ const App = () => {
             })
     }, [])
     return (<main className="app">
-        <img src={pixel} className="pixel" />
+
         <Header />
         <SectionOne />
         <SectionTwo users={state?.users} handleShowMore={handleShowMore} state={state} />
