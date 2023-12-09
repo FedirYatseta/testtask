@@ -6,7 +6,7 @@ import Button from "../ui/Button";
 import axios from "axios";
 import Success from '../assets/Success'
 
-const SectionThree = ({ position }) => {
+const SectionThree = ({ position, setLoad }) => {
     const initErrorState = {
         name: false,
         email: false,
@@ -114,6 +114,7 @@ const SectionThree = ({ position }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setLoad(true)
         // Використайте state для передачі даних
         const formData = new FormData();
         formData.append("photo", state.photo);
@@ -131,11 +132,17 @@ const SectionThree = ({ position }) => {
                     setSuccess(false)
                 }, 2000)
                 setState(initialState)
-            } else { console.log(response.data.message) }
+                setLoad(false)
+            } else {
+                setLoad(false)
+                console.log(response.data.message)
+            }
+            setLoad(false)
         })
             .catch((error) => {
 
                 setErrorResponse(error.message)
+                setLoad(false)
             });
     }
     return (
