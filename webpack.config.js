@@ -50,7 +50,6 @@ module.exports = {
             {
                 test: /\.(png|woff|woff2|eot|ttf|svg)$/i, // to import images and fonts
                 type: 'asset/resource',
-
             },
 
         ],
